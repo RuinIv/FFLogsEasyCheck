@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFLogsEasyCheck", "FFLogsEasyCheck.csproj", "{ACB449A2-D5D8-4530-9113-19E11C057CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tulpep.NotificationWindow", "Notification-Popup-Window\Tulpep.NotificationWindow\Tulpep.NotificationWindow.csproj", "{605006EB-D4E6-4312-A293-3A43FAC43240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB449A2-D5D8-4530-9113-19E11C057CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB449A2-D5D8-4530-9113-19E11C057CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB449A2-D5D8-4530-9113-19E11C057CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB449A2-D5D8-4530-9113-19E11C057CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {767D6422-8F10-4B5E-82EF-F365F333A6F6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+[submodule "Notification-Popup-Window"]
+	path = Notification-Popup-Window
+	url = https://github.com/Tulpep/Notification-Popup-Window.git
