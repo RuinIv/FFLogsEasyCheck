@@ -137,7 +137,7 @@ namespace FFLogsEasyCheck
         public void InitPlugin (TabPage pluginScreenSpace, Label pluginStatusText)
         {
             lblStatus = pluginStatusText; // Hand the status label's reference to our local var
-            pluginScreenSpace.Controls.Add(this); // Add this UserControl to the tab ACT provides
+            pluginScreenSpace?.Controls.Add(this); // Add this UserControl to the tab ACT provides
             pluginScreenSpace.GotFocus += PluginScreenSpace_GotFocus;
             Dock = DockStyle.Fill; // Expand the UserControl to fill the tab's client space
             xmlSettings = new SettingsSerializer(this); // Create a new settings serializer and pass it this instance
@@ -215,7 +215,7 @@ namespace FFLogsEasyCheck
                             }
                         }
                         //Message type header is 8 chars long so we start at 9
-                        characterName = log.Substring(8, (log.IndexOf(PartyJoinMessageFooter) - 8)).Trim();
+                        characterName = log.Substring(8, log.IndexOf(PartyJoinMessageFooter) - 8).Trim();
                     }
                     else
                     {
@@ -263,7 +263,7 @@ namespace FFLogsEasyCheck
             }));
         }
 
-        public void ShowPopup(string title, string body, Image picture = null, Action OnClick = null, Action OnDisposed = null)
+        public static void ShowPopup(string title, string body, Image picture = null, Action OnClick = null, Action OnDisposed = null)
         {
             ActGlobals.oFormActMain.Invoke(new Action(() =>
             {
