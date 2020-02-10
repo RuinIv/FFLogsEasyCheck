@@ -1,5 +1,5 @@
 # FFLogsEasyCheck
-ACT plugin for showing FFLogs stats in an interactable notification when a someone joins your party in FFXIV.
+ACT plugin for showing FFLogs stats in an interactable notification when someone joins your party in FFXIV.
 
 ![](https://imgur.com/eW015DG.png)
 
