@@ -9,9 +9,7 @@ jobs:
       - name: Checkout Master
         uses: actions/checkout@master
       - name: Checkout submodules
-        uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
+        run: git submodule update --init --recursive
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.2
       - name: Restore NuGet Packages
