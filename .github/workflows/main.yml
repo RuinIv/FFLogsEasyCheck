@@ -1,4 +1,4 @@
-name: CI
+name: BuildAfterCommit
 
 on: [push]
 
@@ -6,8 +6,14 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v1
+      - name: Checkout Master
+        uses: actions/checkout@master
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@2.1.0
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.0.2
+      - name: Restore NuGet Packages
+        run: nuget restore $Env:GITHUB_WORKSPACE\FFLogsEasyCheck.sln
       - name: Building Project
         run: |
            cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\"
