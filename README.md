@@ -8,11 +8,13 @@ ACT plugin for showing FFLogs stats in an interactable notification when someone
 # Setup
 1. Drag the plugin dll into your normal ACT plugin directory (%APPDATA%\Advanced Combat Tracker\Plugins).
 
-2. Add the plugin to ACT
+2. Add the plugin to ACT.
 
-3. Configure the plugin, specifically selecting your home region and server
+3. Configure the plugin by selecting the home region and server for the character your are logged in as.
 
 ![](https://i.imgur.com/MMpR0Bx.png)
+
+**Note:** If you have different characters that are on a different server from your main character, or if your permenently transfer your main character to another server, you will need to reconfigure the plugin so that the home region and home server settings are always correct. You do not need to reconfigure when you visit other worlds.
 
 # Optional Settings
 #### Show Notification
