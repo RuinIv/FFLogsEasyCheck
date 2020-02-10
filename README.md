@@ -14,7 +14,7 @@ ACT plugin for showing FFLogs stats in an interactable notification when a someo
 
 ![](https://i.imgur.com/MMpR0Bx.png)
 
-# Options
+# Optional Settings
 #### Show Notification
 - Option for whether or not to show the notification in the corner of your screen. Toggle this to disable notifications if you want to hide them without disabling the plugin.
 
