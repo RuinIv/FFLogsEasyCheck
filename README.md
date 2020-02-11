@@ -5,6 +5,8 @@ ACT plugin for showing FFLogs stats in an interactable notification when someone
 
 [Download the latest release here.](https://github.com/RuinIv/FFLogsEasyCheck/releases/latest)
 
+I would also like to address that this is a tool meant to help players who enjoy raiding and parsing more easily check players FFLogs for the purpose of gathering data on that player's experience in the fight and meant to enable those players to more accuratly make desicions that will improve the party's chance of clearing. It is **NOT** a tool meant to enable kneejerk kicking of players whose logs dont meet your standards. Please give all players who are able to join your party with the gates you set up in Party Finder a fair chance in your party!
+
 ## Setup
 1. Drag the plugin dll into your normal ACT plugin directory (%APPDATA%\Advanced Combat Tracker\Plugins).
 
