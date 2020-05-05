@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -210,7 +210,7 @@ namespace FFLogsEasyCheck
                         }
                         if (serverName == "")
                         {
-                            if (ServerDropdown.SelectedIndex > 0)
+                            if (ServerDropdown.SelectedIndex >= 0)
                             {
                                 serverName = Enum.GetName(typeof(Servers), ServerDropdown.SelectedItem);
                                 server = (Servers)ServerDropdown.SelectedItem;
