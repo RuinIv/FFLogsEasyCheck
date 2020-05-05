@@ -241,7 +241,7 @@ namespace FFLogsEasyCheck
                     if (regionName == "KR")
                     {
                         url = $"https://ko.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
-                        title = $"{characterName} ({serverName} {regionName}) 이 파티에 참가했습니다!";
+                        title = $"{characterName} ({serverName} {regionName}) 님이 파티에 참가했습니다!";
                     }
                     else
                     {
