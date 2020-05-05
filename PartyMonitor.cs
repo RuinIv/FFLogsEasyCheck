@@ -245,13 +245,20 @@ namespace FFLogsEasyCheck
                     //Show Notification
                     if (showNotificationBox.Checked)
                     {
-                        var rankData = await ScrapeProfileData(url);
-                        Image profilePic = null;
-                        if(rankData != null)
-                            profilePic = DownloadProfilePic(rankData.profilePicUrl);
-                        var rankDataCorrupt = rankData == null || string.IsNullOrEmpty(rankData.job) || rankData.rank == -1 || rankData.allStarPoints == -1;
-                        var body = rankDataCorrupt ? "Could not retrieve rank data." : $"{rankData.job} - Rank {rankData.rank} ({rankData.allStarPoints})\n\nClick Here for Full Logs!";
-                        ShowPopup(title, body, profilePic, OnClick: () => Process.Start(url));
+                        if (regionName == "KR")
+                        {
+                            ShowPopup(title, "현재 한국 서버는 팝업 메시지가 완성되지 않았습니다. 클릭해서 웹사이트를  확인해주세요.", null, OnClick: () => Process.Start(url));
+                        }
+                        else
+                        {
+                            var rankData = await ScrapeProfileData(url);
+                            Image profilePic = null;
+                            if (rankData != null)
+                                profilePic = DownloadProfilePic(rankData.profilePicUrl);
+                            var rankDataCorrupt = rankData == null || string.IsNullOrEmpty(rankData.job) || rankData.rank == -1 || rankData.allStarPoints == -1;
+                            var body = rankDataCorrupt ? "Could not retrieve rank data." : $"{rankData.job} - Rank {rankData.rank} ({rankData.allStarPoints})\n\nClick Here for Full Logs!";
+                            ShowPopup(title, body, profilePic, OnClick: () => Process.Start(url));
+                        }
                     }
                     //Auto Open
                     if (autoOpenLogsBox.Checked)
