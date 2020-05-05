@@ -110,7 +110,7 @@ namespace FFLogsEasyCheck
     {
         private string PartyJoinMessageFooter = "joins the party.";
         private const string PartyJoinMessageFooterEn = "joins the party.";
-        private const string PartyJoinMessageFooterKr = "파티에 참가했습니다.";
+        private const string PartyJoinMessageFooterKr = " 님이 파티에 참가했습니다.";
         private readonly string settingsFile = Path.Combine(ActGlobals.oFormActMain.AppDataFolder.FullName,
             "Config\\FFlLogsEasyCheck.config.xml");
 
@@ -237,6 +237,8 @@ namespace FFLogsEasyCheck
                     var encodedName = Uri.EscapeUriString(characterName);
                     var encodedServer = Uri.EscapeUriString(serverName);
                     var url = $"https://www.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
+                    if(regionName == "KR") 
+                        url = $"https://ko.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
                     string title = $"{characterName} ({serverName} {regionName}) joins the party!";
                     //Add to the ACT window text log
                     AddLineToLog(title + $" ({url})");
