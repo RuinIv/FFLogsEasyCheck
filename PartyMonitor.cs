@@ -185,7 +185,6 @@ namespace FFLogsEasyCheck
         private async Task ParseLogForPartyInfo (LogLineEventArgs logInfo)
         {
             var log = logInfo.logLine;
-            AddLineToLog(log);
             //2 for the pos after the ] then the space
             log = log.Substring(log.IndexOf(']') + 2);
             // `/echo DEBUG FFLEC`
