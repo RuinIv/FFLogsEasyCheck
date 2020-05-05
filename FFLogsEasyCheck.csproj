@@ -105,8 +105,8 @@
     <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>cd E:\Projects\ffxiv\FFLogsEasyCheck\packages\ILMerge.3.0.29\tools\net452
-ilmerge E:\Projects\ffxiv\FFLogsEasyCheck\bin\Release\FFLogsEasyCheck.dll E:\Projects\ffxiv\FFLogsEasyCheck\bin\Release\AngleSharp.dll E:\Projects\ffxiv\FFLogsEasyCheck\bin\Release\Tulpep.NotificationWindow.dll /out:E:\Projects\ffxiv\FFLogsEasyCheck\bin\Release\FFLogsEasyCheckFull.dll /target:dll /ndebug
-echo "Built FFLogsEasyCheckFull.dll to bin/Release"</PostBuildEvent>
+    <PostBuildEvent>cd $(ProjectDir)\packages\ILMerge.3.0.29\tools\net452
+ilmerge $(ProjectDir)\bin\Release\FFLogsEasyCheck.dll $(ProjectDir)\bin\Release\AngleSharp.dll $(ProjectDir)\bin\Release\Tulpep.NotificationWindow.dll /out:$(ProjectDir)\bin\Release\FFLogsEasyCheckFull.dll /target:dll /ndebug
+echo "Built FFLogsEasyCheckFull.dll to $(ProjectDir)/bin/Release"</PostBuildEvent>
   </PropertyGroup>
 </Project>
