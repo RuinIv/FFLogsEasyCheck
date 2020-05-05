@@ -155,6 +155,7 @@ namespace FFLogsEasyCheck
 
             ActGlobals.oFormActMain.OnLogLineRead += OnLogLineReadAsync;
             lblStatus.Text = "Plugin Started";
+            pluginScreenSpace.Text = "FFLogs Easy Check";
         }
 
         private void PluginScreenSpace_GotFocus (object sender, EventArgs e)
@@ -527,6 +528,7 @@ namespace FFLogsEasyCheck
 
         private void buttonClearLog_Click(object sender, EventArgs e)
         {
+            logs.Clear();
             logTextBox.Text = "";
         }
     }
