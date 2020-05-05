@@ -236,10 +236,18 @@ namespace FFLogsEasyCheck
                     var encodedRegion = Uri.EscapeUriString(regionName);
                     var encodedName = Uri.EscapeUriString(characterName);
                     var encodedServer = Uri.EscapeUriString(serverName);
-                    var url = $"https://www.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
-                    if(regionName == "KR") 
+                    string url;
+                    string title;
+                    if (regionName == "KR")
+                    {
                         url = $"https://ko.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
-                    string title = $"{characterName} ({serverName} {regionName}) joins the party!";
+                        title = $"{characterName} ({serverName} {regionName}) 이 파티에 참가했습니다!";
+                    }
+                    else
+                    {
+                        url = $"https://www.fflogs.com/character/{encodedRegion}/{encodedServer}/{encodedName}";
+                        title = $"{characterName} ({serverName} {regionName}) joins the party!";
+                    }
                     //Add to the ACT window text log
                     AddLineToLog(title + $" ({url})");
                     //Show Notification
@@ -247,7 +255,8 @@ namespace FFLogsEasyCheck
                     {
                         if (regionName == "KR")
                         {
-                            ShowPopup(title, "현재 한국 서버는 팝업 메시지가 완성되지 않았습니다. 클릭해서 웹사이트를  확인해주세요.", null, OnClick: () => Process.Start(url));
+                            var body = "한국 서버는 팝업 알림이 지원되지 않습니다.\n\n전체 로그를 확인하려면 클릭하세요!";
+                            ShowPopup(title, body, null, OnClick: () => Process.Start(url));
                         }
                         else
                         {
